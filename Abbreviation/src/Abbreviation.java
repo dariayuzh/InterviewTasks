@@ -8,6 +8,13 @@ public class Abbreviation {
     private static Pattern pattern = Pattern.compile("[а-яА-Яё]+");
     private static ArrayList<String> conjunctions = new ArrayList<>(Arrays.asList("и", "или"));
 
+    /**
+     * Creates an abbreviation from a source string.
+     *
+     * Supports Russian language only.
+     * @param string source string
+     * @return an abbreviation
+     */
     public static String abbreviation(String string) {
         Matcher matcher = pattern.matcher(string);
         StringBuilder abbreviation = new StringBuilder();

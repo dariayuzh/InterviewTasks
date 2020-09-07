@@ -33,4 +33,10 @@ public class AbbreviationTest {
         String abbreviation = Abbreviation.abbreviation("московский   , государственный :? университет.");
         assertEquals("МГУ", abbreviation);
     }
+
+    @Test
+    public void abbreviationEmptyInput() {
+        String abbreviation = Abbreviation.abbreviation("");
+        assertEquals("", abbreviation);
+    }
 }
